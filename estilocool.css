@@ -1,0 +1,46 @@
+h1 {color: lime;
+    font: bold 50px Pristina;
+    text-align: center; }
+
+h2 {color: MEDIUMBLUE;
+   font: bold 35px Felix Titling;}
+
+p {font: 20px Comic Sans MS;
+   sans-serif;
+   color: ORANGERED;}
+
+div {font: 20px Comic Sans MS;
+   sans-serif;
+   color: ORANGERED;}
+
+body {background-image: url("Fondo/cubo.gif");
+      }
+
+header {display: block;
+        border: 3px solid #FFFAFA;
+        border-radius: 10px;}
+
+aside {float: right;
+       border: 20px double #FFFFFF;
+       border-radius: 10px; 
+       background-color: GOLD;
+       width: 45%;
+       display: block;
+       margin: 10px;
+       padding: 5px;}
+
+article {float: left;
+         border: 20px double #FFFFFF;
+         border-radius: 10px; 
+         background-color: GOLD;
+         width: 45%;
+         display: block;
+         margin: 10px;
+         padding: 5px;}
+
+footer {display: block;
+        float:nome;
+        clear: both;
+        background-color: DODGERBLUE;
+        color: white;
+        text-align: center;}
