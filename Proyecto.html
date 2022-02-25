@@ -1,0 +1,178 @@
+<!DOCTYE html>
+<html>
+    <head>
+        <meta name="author" description="Josué-Juan de Dios-Aldo">
+        <meta name="keywords" description="HTML, WED">
+        <meta name="descripcion" content="uso de texto en HTML">
+        <meta chrset="utf-8" >
+        <link rel="stylesheet" type="text/css" href="estilocool.css" media="screen" />
+        <title>bati cueva</title>
+        <script>
+		function Calcular(){
+			var ancDes = document.getElementById("anc1").value;
+			var larDes = document.getElementById("lar1").value;
+			document.getElementById("Escribir").innerHTML="\ Largo: "+ larDes +"\ <br> Ancho "+ ancDes;
+			var resMat= 0;
+			var resH = 0;
+			var resV = 0;
+			var L=5.6;
+			var A=2.8;
+			var CV=0;
+			var CH=0;
+			resMat = (L*A)/(ancDes*larDes);
+			//Vertical
+			if(ancDes <= L && larDes <=A){
+			do{
+				if(ancDes<=L){
+					resV=resV+1;
+					L=L-ancDes;
+					}
+				}while(ancDes<=L);
+				do{
+					if(larDes<=A){
+						CV=CV+1;
+						A=A-larDes;
+						}
+					}while(larDes<=A);
+					if(CV>0){
+						resV=resV*CV;
+						}
+				}else{
+					resV=0;
+					}
+					L= 5.6;
+					A=2.8;
+			//Horizontal
+			do{
+				if(larDes<=L){
+					resH=resH+1;
+					L=L-larDes;
+					}
+				}while(larDes<=L);
+				do{
+					if(ancDes<=A){
+						CH=CH+1;
+						A=A-ancDes;
+						}
+				}while(ancDes<=A);
+			if(CH>0){
+						resH=resH*CH;
+						}
+				else{
+					resH=0;
+					}
+			document.getElementById("ERes").innerHTML="\Matematicamente: "+resMat+"\<br> Horizontal: "+resH+"\ <br> Verticalmente: "+resV;
+			}
+		function Calcula2(){
+			var ancAct = document.getElementById("anc2").value;
+			var larAct = document.getElementById("lar2").value;
+			document.getElementById("Escribir1").innerHTML="\ Largo: "+ larAct +"\ <br> Ancho: "+ancAct;
+			var resMat1= 0;
+			var resH1 = 0;
+			var resV1 = 0;
+			var L1=5.6;
+			var A1=2.8;
+			var CV1=0;
+			var CH1=0;
+			resMat1 = (L1*A1)/(ancAct*larAct);
+			//Vertical
+			if(ancAct <= L1 && larAct <=A1){
+			do{
+				if(ancAct<=L1){
+					resV1=resV1+1;
+					L1=L1-ancAct;
+					}
+				}while(ancAct<=L1);
+				do{
+					if(larAct<=A1){
+						CV1=CV1+1;
+						A1=A1-larAct;
+						}
+					}while(larAct<=A1);
+					if(CV1>0){
+						resV1=resV1*CV1;
+						}
+				}else{
+					resV1=0;
+					}
+					L1= 5.6;
+					A1=2.8;
+			//Horizontal
+			do{
+				if(larAct<=L1){
+					resH1=resH1+1;
+					L1=L1-larAct;
+					}
+				}while(larAct<=L1);
+				do{
+					if(ancAct<=A1){
+						CH1=CH1+1;
+						A1=A1-ancAct;
+						}
+				}while(ancAct<=A1);
+			if(CH1>0){
+						resH1=resH1*CH1;
+						}
+				else{
+					resH1=0;
+					}
+			document.getElementById("ERes1").innerHTML="\Matematicamente: "+resMat1+"\<br> Horizontal: "+resH1+"\ <br> Verticalmente: "+resV1;
+		}
+		</script>
+    </head>
+    <div onselectstart="return false">
+    <body background="cubo.gif">
+
+<script type="text/javascript">
+             document.onkeydown = function
+     </script>
+
+<header>
+     </script>
+<div onselectstart="return false">
+<h1>PROYECTO UNIDAD I</h1><br>
+</header>
+
+
+  <article>
+<div onselectstart="return false">
+   <h2>DESACTIVADO.</h2>
+    <p>Largo predeterminado: 5.6<br>
+       Ancho predeterminado: 2.8<br></p>
+
+       <p>Largo.</p>
+   <form id="Figurades">
+    <input type="number" id="lar1" placeholder="Solo numeros" title="Pon el largo de la figura " pattern="[0-9]{1,}" tabindex="1" required>
+       <p>Ancho.</p>
+    <input type="number" id="anc1" placeholder="Solo numeros" title="Pon el ancho de la figura" pattern="[0-9]{1,}" tabindex="1" required>
+    <input type="button" value="Calcular" onClick="Calcular()">
+    </form>
+  <h2>Resultado.</h2>
+  <div id="Escribir"></div>
+  <div id="ERes"></div>
+   </div>
+ </article>
+
+  <aside>
+<div onselectstart="return false">
+   <h2>ACTIVADO</h2>
+    <p>Largo predeterminado: 5.6<br>
+       Ancho predeterminado: 2.8<br></p>
+    <p>Largo.</p>
+    <form id="FiguraAct">
+    <input type="number" id="lar2" placeholder="Solo numeros" title="Pon el largo de la figura" pattern="[0-9]{1,}" tabindex="1" required>
+       <p>Ancho.</p>
+    <input type="number" id="anc2" placeholder="Solo numeros" title="Pon el ancho de la figura" pattern="[0-9]{1,}" tabindex="1" required>
+    <input type="button" onClick="Calcula2()" value="Calcular">
+    </form>
+    <h2>Resultado.</h2>
+    <div id="Escribir1"></div>
+    <div id="ERes1"></div>
+</aside>
+
+<footer>
+Desarrollado por: Josué-Juan de Dios-Aldo.  Mex-2022 
+</footer>
+     
+    </body>
+</html>
